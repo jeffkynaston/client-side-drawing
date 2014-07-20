@@ -1,0 +1,63 @@
+a, a:hover, a:after, a:active {
+	text-decoration: none;
+	color: #0B8AA8;	
+}
+
+body {
+	font-family: 'lato', 'sans-serif';
+	font-weight: 300;
+	color: #2C2D3B;
+}
+
+header {
+	margin-top: 20px;
+}
+
+section {
+	margin-top: 20px;
+}
+
+canvas {
+	background-color: #F4F7FF;
+	-webkit-box-shadow: 5px 5px 30px -4px rgba(0,27,39,1);
+	-moz-box-shadow: 5px 5px 30px -4px rgba(0,27,39,1);
+	box-shadow: 5px 5px 30px -4px rgba(0,27,39,1);
+}
+
+li {
+	display: inline-block;
+	background-color: #EAEDF5;
+	padding: 10px;
+	-webkit-box-shadow: inset 0px 0px 20px 0px rgba(168,170,176,1);
+	-moz-box-shadow: inset 0px 0px 20px 0px rgba(168,170,176,1);
+	box-shadow: inset 0px 0px 20px 0px rgba(168,170,176,1);
+	margin: 5px;
+}
+.drawings {
+	margin: auto;
+	width: 600px;
+}
+
+.container {
+	margin: auto;
+	max-width: 1200px;
+}
+
+#header-nav {
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 0px;
+	max-width: 800px;
+}
+
+/* Atomic Styles */
+.center {
+	text-align: center;
+	margin: auto;
+}
+
+.ftw-100 { font-weight: 100;}
+.ftw-300 { font-weight: 300;}
+.ftw-400 { font-weight: 400;}
+.md-blue { color: #045476;}
+.indent { padding-left: 20px;}
