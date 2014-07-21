@@ -9,19 +9,27 @@ var stage = new Kinetic.Stage({
 
 var layer = new Kinetic.Layer();
 
+
+document.getElementById('reset').addEventListener('click', function() {
+    layer.removeChildren();
+    firstStar();
+      }, true);
+
+
+
 function firstStar() {
-  makeStar(layer, stage, 1);
+  makeStar(layer, stage, 1, 300, 150);
   stage.draw();
 }
 
-function makeStar(layer, stage, scale) {
+function makeStar(layer, stage, scale, x, y) {
 
   var star = new Kinetic.Star({
-    x: Math.random() * stage.width(),
-    y: Math.random() * stage.height(),
+    x: Math.random() * ((x + 80)-(x - 80)) + (x-80),
+    y: Math.random() * ((y + 80)-(y - 80)) + (y-80),
     numPoints: 8,
-    innerRadius: 25,
-    outerRadius: 50,
+    innerRadius: 40,
+    outerRadius: 80,
     fill: 'red',
     shadowColor: 'black',
     shadowBlur: 10,
@@ -36,16 +44,18 @@ function makeStar(layer, stage, scale) {
   stage.add(layer)
 }
 
-function manyStars(layer, stage, scale){
+function manyStars(layer, stage, scale, x, y){
   for(var n = 0; n < 3; n++) {
-   makeStar(layer,stage, scale)
+   makeStar(layer,stage, scale, x, y)
   }
 }
 
 function blowup(star){
   size = star.scale()['x']
+  x = star.getX()
+  y = star.getY()
   star.remove()
-  manyStars(layer, stage, size * 0.8)
+  manyStars(layer, stage, size * 0.8, x, y)
   stage.draw()
 }
 
