@@ -1,6 +1,6 @@
 a, a:hover, a:after, a:active {
 	text-decoration: none;
-	color: #0B8AA8;	
+	color: #0B8AA8;
 }
 
 body {
@@ -49,7 +49,6 @@ li {
 	margin-bottom: 0px;
 	max-width: 800px;
 }
-
 /* Atomic Styles */
 .center {
 	text-align: center;
