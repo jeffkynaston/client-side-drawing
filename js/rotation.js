@@ -4,6 +4,13 @@ function drawRotation(){
             width: 600,
             height: 300
           });
+  var circle = new Kinetic.Circle({
+    x: 300,
+    y: 150,
+    radius: 50,
+    fill: '#0B8AA8',
+    opacity: 0.8
+  });
 
   var rectangle1 = new Kinetic.Rect({
     x: 250,
@@ -57,9 +64,12 @@ function drawRotation(){
   group.add(rectangle4)
 
   shapesLayer = new Kinetic.Layer();
+  cicleLayer = new Kinetic.Layer();
 
   shapesLayer.add(group)
+  cicleLayer.add(circle)
 
+  stage.add(cicleLayer)
   stage.add(shapesLayer)
   stage.draw()
 
@@ -82,5 +92,11 @@ function drawRotation(){
   }, shapesLayer);
 
   rotatation.start();
+
+  var circleAnim = new Kinetic.Animation(function(frame){
+    circle.opacity((Math.sin(frame.time * 2 * Math.PI/ period) +1)/3 )
+  }, cicleLayer)
+
+  circleAnim.start();
 
 }
