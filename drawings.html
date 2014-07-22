@@ -9,9 +9,12 @@
 	<script type="text/javascript" src="js/animations.js"></script>
 	<script type="text/javascript" src="js/straightlines.js"></script>
 	<script type="text/javascript" src="js/elasticstars.js"></script>
+	<script type="text/javascript" src="js/explodingstars.js"></script>
+	<script type="text/javascript" src="js/rotation.js"></script>
 	<script type="text/javascript" src="js/drawings.js"></script>
-	
-	
+
+
+
 	<title>Client Side Drawings</title>
 </head>
 <body>
@@ -25,9 +28,11 @@
 					<a href="#shapes"><li>Shapes</li></a>
 					<a href="#animations"><li>Animations</li></a>
 					<a href="#elasticstars"><li>Elastic Stars</li></a>
-				</ul>	
+					<a href="#explodingstars"><li>Exploding Stars</li></a>
+					<a href="#rotation"><li>Rotation</li></a>
+				</ul>
 			</div>
-		</div>	
+		</div>
 	</header>
 	<section>
 		<div class="container">
@@ -41,9 +46,15 @@
 				<h4 class="indent ftw-400">Animations</h4>
 				<canvas id="animations" height="300" width="600" class="center"></canvas>
 				<h4 class="indent ftw-400">Elastic Stars with Kinetic.js</h4>
-				<div id="elasticstars" height="300" width="600" class="center">
+				<div id="elasticstars" height="300" width="600" class="center"></div>
+				<h4 class="indent ftw-400">Clickable Stars with Kinetic.js</h4>
+					<button id="reset">RESET</button>
+				<div id="explodingstars" height="300" width="600" class="center"></div>
+				<h4 class="indent ftw-400">Rotation and Occilation with Kinetic.js</h4>
+				<div id="rotation" height="300" width="600" class="center"></div>
 			</div>
 		</div>
 	</section>
+
 </body>
 </html>

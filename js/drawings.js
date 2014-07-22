@@ -3,6 +3,7 @@ window.onload=function(){
   drawElasticStars();
   drawGradients();
   drawStraightLines();
-  drawAnimations();  
-
+  drawAnimations();
+  initExplodingStars();
+  drawRotation();
 };
